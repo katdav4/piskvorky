@@ -2,23 +2,21 @@ html {
   box-sizing: border-box;
 }
 
-body {
+.stranka {
   display: flex;
-  width: 100vw;
-  height: 100vh;
   margin: 0;
   padding: 0;
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
+  background-repeat: no-repeat;
   justify-content: center;
 }
 
 .vizual {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  height: 77%;
+  max-width: 30%;
+  max-height: 77%;
   background-color: #283e50;
-  /* margin: 60px 70px 30px 70px; */
   border-radius: 10px 10px 0px 0px;
   margin: 70px;
 }
