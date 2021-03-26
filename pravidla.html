@@ -13,22 +13,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="stranka">
-      <main class="vizual">
-        <section class="vizual__pravidla">
-          <h1>Pravidla</h1>
-        </section>
+    <main class="vizual">
+      <section>
+        <h1 class="vizual_nadpis">Pravidla</h1>
         <ol>
           <li>Hra piškvorky je určena pro dva hráče.</li>
           <li>Hraje se na hrací ploše 10×10, tvořené poli ve tvaru čtverce.</li>
           <li>
-            Na začátku si hráči rozdělí role. Jeden bude hrát za kolečka,<filter
-              ><img class="circle" src="podklady/cast2/podklady/circle.svg"
-            /></filter>
-            druhý bude hrát za křížky<img
-              class="cross"
-              src="podklady/cast2/podklady/cross.svg"
-            />.
+            Na začátku si hráči rozdělí role. Jeden bude hrát za kolečka, druhý
+            bude hrát za křížky.
           </li>
           <li>
             Losem se určí, kdo bude začínat. V naší aplikaci to vylosujeme za
@@ -52,69 +45,68 @@
             symbolů do jedné řady, hra končí remízou.
           </li>
         </ol>
-        <section class="pole">
-          <figure>
-            <img
-              class="pole__img"
-              src="podklady/cast2/podklady/instructions-01.jpg"
-              alt="Situace_1"
-            />
-            <figcaption>
-              Situace po třech tazích - na tahu je hráč s kolečky
-            </figcaption>
-          </figure>
+      </section>
+      <section class="kontejner">
+        <figure class="pole">
+          <img
+            class="pole_img"
+            src="podklady/cast2/podklady/instructions-01.jpg"
+            alt="Situace_1"
+          />
+          <figcaption>
+            Situace po třech tazích - na tahu je hráč s kolečky
+          </figcaption>
+        </figure>
+        <figure class="pole">
+          <img
+            class="pole_img"
+            src="podklady/cast2/podklady/instructions-02.jpg"
+            alt="Situace_2"
+          />
+          <figcaption>Situace po čtyřech tazích</figcaption>
+        </figure>
+        <figure class="pole">
+          <img
+            class="pole_img"
+            src="podklady/cast2/podklady/instructions-03.jpg"
+            alt="Situace_3"
+          />
+          <figcaption>Výherní pozice hráče s kolečky</figcaption>
+        </figure>
+        <figure class="pole">
+          <img
+            class="pole_img"
+            src="podklady/cast2/podklady/instructions-04.jpg"
+            alt="Situace_4"
+          />
+          <figcaption>
+            V této situaci nikdo nevyhrává. Pokud je na tahu hráč s kolečky,
+            může přidat další kolečko do šikmé řady, kde už má 4 kolečka, a
+            vyhraje.
+          </figcaption>
+        </figure>
+        <figure class="pole">
+          <img
+            class="pole_img"
+            src="podklady/cast2/podklady/instructions-05.jpg"
+            alt="Situace_5"
+          />
+          <figcaption>Výherní pozice hráče s křížky</figcaption>
+        </figure>
+        <figure class="pole">
+          <img
+            class="pole_img"
+            src="podklady/cast2/podklady/instructions-06.jpg"
+            alt="Situace_6"
+          />
+          <figcaption>Ještě jedna výherní pozice hráče s kolečky</figcaption>
+        </figure>
+      </section>
 
-          <figure>
-            <img
-              class="pole__img"
-              src="podklady/cast2/podklady/instructions-02.jpg"
-              alt="Situace_2"
-            />
-            <figcaption>Situace po čtyřech tazích</figcaption>
-          </figure>
-          <figure>
-            <img
-              class="pole__img"
-              src="podklady/cast2/podklady/instructions-03.jpg"
-              alt="Situace_3"
-            />
-            <figcaption>Výherní pozice hráče s kolečky</figcaption>
-          </figure>
-          <figure>
-            <img
-              class="pole__img"
-              src="podklady/cast2/podklady/instructions-04.jpg"
-              alt="Situace_4"
-            />
-            <figcaption>
-              V této situaci nikdo nevyhrává. Pokud je na tahu hráč s kolečky,
-              může přidat další kolečko do šikmé řady, kde už má 4 kolečka, a
-              vyhraje.
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              class="pole__img"
-              src="podklady/cast2/podklady/instructions-05.jpg"
-              alt="Situace_5"
-            />
-            <figcaption>Výherní pozice hráče s křížky</figcaption>
-          </figure>
-          <figure>
-            <img
-              class="pole__img"
-              src="podklady/cast2/podklady/instructions-06.jpg"
-              alt="Situace_6"
-            />
-            <figcaption>Ještě jedna výherní pozice hráče s kolečky</figcaption>
-          </figure>
-        </section>
-
-        <section class="tlacitka">
-          <a class="pravidla" href="pravidla.html">Pravidla</a>
-          <a class="zacit" href="#">Začít hrát</a>
-        </section>
-      </main>
-    </div>
+      <section class="tlacitka">
+        <a class="pravidla" href="pravidla.html">Pravidla</a>
+        <a class="zacit" href="#">Začít hrát</a>
+      </section>
+    </main>
   </body>
 </html>

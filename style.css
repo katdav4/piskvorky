@@ -4,43 +4,39 @@ html {
 
 body {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
-  font-family: Arial, Helvetica, sans-serif;
   background-repeat: no-repeat;
-  min-height: 100vh;
-}
-
-.vizual {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-size: 1em;
   line-height: 1.4;
-  width: 40vw;
-  max-width: 100vh;
-  min-width: 45vw;
-  background-color: #283e50;
-  border-radius: 10px 10px 0px 0px;
-  margin: 3rem auto 3rem auto;
+  min-width: 100vw;
+  margin: 0;
   padding: 0;
 }
 
-img {
+.vizual {
+  width: 80vw;
+  max-width: 40vw;
+  min-width: 300px;
+  background-color: #283e50;
+  border-radius: 10px 10px 0px 0px;
+  margin: 3em auto;
+}
+
+.uvodni {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0px 0px;
 }
 
 .telo {
-  display: flex;
-  flex-direction: column;
   word-break: break-word;
   background-color: #283e50;
 }
 
 h1 {
   font-family: 'Lobster', cursive;
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -84,6 +80,9 @@ p {
 }
 
 /* --------------------------------------------------Pravidla----- */
+.vizual_nadpis {
+  padding-top: 1em;
+}
 
 ol {
   padding: 20px;
@@ -92,35 +91,25 @@ ol {
 li {
   padding: 0.5em;
 }
-.cross,
-.circle {
-  width: 1em;
-  height: 1em;
-  margin-left: 0.2em;
-  filter: invert(100%);
-}
-.circle:hover,
-.cross:hover {
-  filter: invert(0%);
-}
 
-.pole {
+.kontejner {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  margin: 20px;
-  padding: 0;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+.pole {
+  width: 40%;
+  text-align: center;
+  margin: 1em;
 }
 
-.pole__img {
-  border-radius: 0%;
-  max-width: 25vh;
-  max-height: 25vh;
+.pole_img {
+  width: 100%;
+  border-radius: none;
 }
 
 figcaption {
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-style: italic;
-  max-width: 25vh;
-  max-height: 25vh;
 }
