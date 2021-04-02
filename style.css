@@ -230,6 +230,9 @@ button:focus {
   margin: 0;
   padding: 0;
 }
+.bez-pozadi {
+  background-color: transparent;
+}
 @media (max-width: 750px) {
   .hraci_pole button {
     height: 2.2rem;
