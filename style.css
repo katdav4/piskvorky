@@ -244,13 +244,13 @@ figcaption {
 }
 
 button.ikon_c {
-  background-image: url('podklady/cast2/podklady/circle.svg');
+  background-image: url('images/circle.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
 button.ikon_s {
-  background-image: url('podklady/cast2/podklady/cross.svg');
+  background-image: url('images/cross.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
