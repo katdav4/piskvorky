@@ -243,22 +243,14 @@ figcaption {
   }
 }
 
-.ikon_c {
+button.ikon_c {
   background-image: url('podklady/cast2/podklady/circle.svg');
   background-repeat: no-repeat;
-  height: 2.8rem;
-  width: 2.8rem;
+  background-position: center;
 }
 
-.ikon_s {
+button.ikon_s {
   background-image: url('podklady/cast2/podklady/cross.svg');
   background-repeat: no-repeat;
-  height: 2.8rem;
-  width: 2.8rem;
-  padding: 0;
-  margin: 0;
-}
-
-.play {
-  background-image: url('podklady/cast2/podklady/circle.svg');
+  background-position: center;
 }

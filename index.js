@@ -21,11 +21,14 @@ const kdoJeNaTahu = () => {
 };
 
 const vymenaHrace = () => {
-  console.log(kdoJeNaTahu());
   if (kdoJeNaTahu() === 'circle') {
     document.querySelector('.ikon_circle').attributes.alt.value = 'cross';
+    document.querySelector('.ikon_circle').attributes.src.value =
+      'podklady/cast2/podklady/cross.svg';
   } else {
     document.querySelector('.ikon_circle').attributes.alt.value = 'circle';
+    document.querySelector('.ikon_circle').attributes.src.value =
+      'podklady/cast2/podklady/circle.svg';
   }
 };
 
