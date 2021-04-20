@@ -53,20 +53,23 @@ const kdoVyhral = () => {
       const vysledek = kdoJeNapoli(btnElm);
       radek.push(vysledek); /* ulozi se do radku */
     });
-    aktualniStavHry.push(radek);
+    aktualniStavHry.push(radek); /* vyplni radkama hru*/
   });
-  console.log(aktualniStavHry);
 
-  let souradniceRadek = 0;
-  let souradniceSloupec = 0;
   let vyhra = false;
-  while (souradniceSloupec < 5 && !vyhra) {
-    vyhra = testVyhryVRadku(
-      aktualniStavHry,
-      souradniceRadek,
-      souradniceSloupec,
-    );
-    souradniceSloupec++;
+  let souradniceRadek = 0;
+
+  while (souradniceRadek < 10 && !vyhra) {
+    let souradniceSloupec = 0;
+    while (souradniceSloupec < 5 && !vyhra) {
+      vyhra = testVyhryVRadku(
+        aktualniStavHry,
+        souradniceRadek,
+        souradniceSloupec,
+      );
+      souradniceSloupec++;
+    }
+    souradniceRadek++;
   }
 
   if (vyhra) {
@@ -83,6 +86,8 @@ const kdoJeNapoli = (btnElm) => {
     return '';
   }
 };
+
+/* testuje vyhru v jednom radku z prvni pozice*/
 
 const testVyhryVRadku = (
   aktualniStavHry,
