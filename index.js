@@ -3,11 +3,20 @@
 document.querySelector('.ctverecky').addEventListener('click', (event) => {
   zobrazTah(kdoJeNaTahu(), event.target);
   if (zjistiVyhru()) {
-    console.log('vyhra');
+    zablokujPole();
+    const vyhraElm = document.querySelector('.leve_text');
+    vyhraElm.textContent = 'VYHRÁVÁ';
+    vyhraElm.style.color = '#A6341B';
   } else {
     vymenaHrace();
   }
 });
+
+const zablokujPole = () => {
+  document.querySelectorAll('.ctverecky button').forEach((buttonElm) => {
+    buttonElm.disabled = 'true';
+  });
+};
 
 const kdoJeNaTahu = () => {
   return document.querySelector('.ikon_circle').attributes.alt.value;
