@@ -15,6 +15,7 @@ document.querySelector('.ctverecky').addEventListener('click', (event) => {
 const zablokujPole = () => {
   document.querySelectorAll('.ctverecky button').forEach((buttonElm) => {
     buttonElm.disabled = 'true';
+    buttonElm.style.cursor = 'not-allowed';
   });
 };
 
@@ -62,7 +63,7 @@ const zjistiVyhru = () => {
 
   while (souradniceRadek < 10 && !vyhra) {
     let souradniceSloupec = 0;
-    while (souradniceSloupec < 5 && !vyhra) {
+    while (souradniceSloupec < 6 && !vyhra) {
       vyhra = testVyhryVRadku(
         aktualniStavHry,
         souradniceRadek,
@@ -76,11 +77,11 @@ const zjistiVyhru = () => {
   let souradniceSloupec = 0;
   while (souradniceSloupec < 10 && !vyhra) {
     let souradniceRadek = 0;
-    while (souradniceRadek < 5 && !vyhra) {
+    while (souradniceRadek < 6 && !vyhra) {
       vyhra = testVyhryVeSloupci(
         aktualniStavHry,
-        souradniceSloupec,
         souradniceRadek,
+        souradniceSloupec,
       );
       souradniceRadek++;
     }
@@ -88,17 +89,31 @@ const zjistiVyhru = () => {
   }
 
   souradniceSloupec = 0;
-  while (souradniceSloupec < 5 && !vyhra) {
+  while (souradniceSloupec < 6 && !vyhra) {
     let souradniceRadek = 0;
-    while (souradniceRadek < 5 && !vyhra) {
-      vyhra = testVyhryVDiagonale(
+    while (souradniceRadek < 6 && !vyhra) {
+      vyhra = testVyhryVDiagonaleLP(
         aktualniStavHry,
-        souradniceSloupec,
         souradniceRadek,
+        souradniceSloupec,
       );
       souradniceRadek++;
     }
     souradniceSloupec++;
+  }
+
+  souradniceSloupec = 9;
+  while (souradniceSloupec > 3 && !vyhra) {
+    let souradniceRadek = 0;
+    while (souradniceRadek < 6 && !vyhra) {
+      vyhra = testVyhryVDiagonalePL(
+        aktualniStavHry,
+        souradniceRadek,
+        souradniceSloupec,
+      );
+      souradniceRadek++;
+    }
+    souradniceSloupec--;
   }
 
   return vyhra;
@@ -166,7 +181,7 @@ const testVyhryVeSloupci = (
   }
 };
 
-const testVyhryVDiagonale = (
+const testVyhryVDiagonaleLP = (
   aktualniStavHry,
   souradniceRadek,
   souradniceSloupec,
@@ -181,6 +196,32 @@ const testVyhryVDiagonale = (
       aktualniStavHry[souradniceRadek + 3][souradniceSloupec + 3] ===
         symbolPolicka &&
       aktualniStavHry[souradniceRadek + 4][souradniceSloupec + 4] ===
+        symbolPolicka
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+};
+
+const testVyhryVDiagonalePL = (
+  aktualniStavHry,
+  souradniceRadek,
+  souradniceSloupec,
+) => {
+  const symbolPolicka = aktualniStavHry[souradniceRadek][souradniceSloupec];
+  if (symbolPolicka === 'o' || symbolPolicka === 'x') {
+    if (
+      aktualniStavHry[souradniceRadek + 1][souradniceSloupec - 1] ===
+        symbolPolicka &&
+      aktualniStavHry[souradniceRadek + 2][souradniceSloupec - 2] ===
+        symbolPolicka &&
+      aktualniStavHry[souradniceRadek + 3][souradniceSloupec - 3] ===
+        symbolPolicka &&
+      aktualniStavHry[souradniceRadek + 4][souradniceSloupec - 4] ===
         symbolPolicka
     ) {
       return true;
