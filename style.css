@@ -210,6 +210,7 @@ figcaption {
   background-color: rgb(193, 180, 215);
   float: left;
   padding: 0;
+  cursor: pointer;
 }
 .hraci_pole button:hover {
   filter: brightness(80%);
@@ -228,8 +229,8 @@ figcaption {
     width: 2.2rem;
   }
   .kontejner_ikon img {
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
   }
 }
 @media (max-width: 590px) {
@@ -238,8 +239,8 @@ figcaption {
     width: 1.8rem;
   }
   .kontejner_ikon img {
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
   }
 }
 
