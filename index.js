@@ -12,6 +12,17 @@ document.querySelector('.ctverecky').addEventListener('click', (event) => {
   }
 });
 
+document.querySelector('.ikon_restart').addEventListener('click', () => {
+  if (zjistiVyhru()) {
+    location.reload();
+  } else {
+    let potvrzeni = confirm('Opravdu chcete přerušit hru?');
+    if (potvrzeni === true) {
+      location.reload();
+    }
+  }
+});
+
 const zablokujPole = () => {
   document.querySelectorAll('.ctverecky button').forEach((buttonElm) => {
     buttonElm.disabled = 'true';
